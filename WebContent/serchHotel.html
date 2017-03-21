@@ -20,9 +20,7 @@ $(function() {
 		requestObj.price = $("#price").val();
 		//JavaScriptのオブジェクトをJSONに変換する	
   		var requestJson =JSON.stringify(requestObj); 
-		  console.log(requestJson);    
-
-	
+		 console.log(requestJson);    
 
 	// サーブレットに値を送信、値を受け取る
 	$.getJSON('/javamarathon10km/Javamarathon10kmServlet', {price : requestJson},function(data){
@@ -54,18 +52,15 @@ $(function() {
  	});	 
 });
 </script>
-
 <title>ホテル検索画面</title>
 </head>
 <body>
-
-<h1>ホテル検索</h1>
-
- <FORM action='./Javamarathon10kmservelet' method=get>
-一泊料金：<INPUT type='text' id="price"  value=''>以下
-<BR>
-<INPUT type='button' id="request"  value='検索'>
-</FORM>
-<div id="hotel"></div>    
+	<h1>ホテル検索</h1>
+	 <FORM action='./Javamarathon10kmservelet' method=get>
+		一泊料金：<INPUT type='text' id="price"  value=''>以下
+		<BR>
+		<INPUT type='button' id="request"  value='検索'>
+	</FORM>
+	<div id="hotel"></div>    
 </body>
 </html>
